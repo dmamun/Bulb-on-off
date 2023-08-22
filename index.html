@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <div class="bg-slate-600 max-h-screen">
+        <img id="img" src="bulb-off.jpg" class="flex justify-center items-center h-40 w-72">
+        <button id="btn-click" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4">
+            Turn on
+          </button>
+    </div>
+    <script>
+     const image=document.getElementById("img");
+     const button=document.getElementById("btn-click");
+     button.addEventListener('click',function(){
+        if(button.innerText.includes("on")){
+           image.src="bulb-on.jpg"
+           button.innerText="turn off"
+        }
+        else{
+            image.src="bulb-off.jpg"
+            button.innerText="turn on"
+        }
+     })
+    </script>
+    
+</body>
+</html>
